@@ -18,7 +18,7 @@ import numpy as np
 from scipy.spatial.transform import Rotation as R
 import pandaplotutils.pandageom as pandageom
 import time
-from icra20_manipulation_pose.srv import SearchObject
+# from icra20_manipulation_pose.srv import SearchObject
 from scipy.special import softmax
 
 import networkx as nx
@@ -590,7 +590,7 @@ def move_arm_to_startPos(robot):
 
 if __name__=='__main__':
 
-  object_name = "cup"
+  object_name = "can"
   # object_name = "book"
   # object_name = "box"
   # object_name = "cuboid"
