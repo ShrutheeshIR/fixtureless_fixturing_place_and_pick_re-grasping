@@ -37,7 +37,7 @@ class Arm:
         self.client = actionlib.SimpleActionClient("/arm_controller/follow_joint_trajectory", FollowJointTrajectoryAction)
         self.init_position = [-1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
-        rospy.loginfo('Waiting for joint trajectory action')    
+        rospy.loginfo('Waiting for arm joint trajectory action')    
         self.client.wait_for_server()
         rospy.loginfo('Found joint trajectory action!')
 
@@ -97,7 +97,9 @@ class SimObjectMover(object):
         self.arm = arm_
         self.gripper  = gripper_
         s = rospy.Service('move_object', ObjectPose, self.MoveObjectHandler)
+        print("Move object")
         robot_s = rospy.Service('reset_robot', ResetRobot, self.resetRobot)
+        print("Reset")
         rospy.loginfo("object mover in sim is ready!!")
         rospy.spin()
 
@@ -157,6 +159,7 @@ class SimObjectMover(object):
 
 if __name__ == "__main__":
     rospy.init_node('sim_object_server')
+    print('Initing object server!')
 
     arm = Arm()
     gripper = Gripper()
