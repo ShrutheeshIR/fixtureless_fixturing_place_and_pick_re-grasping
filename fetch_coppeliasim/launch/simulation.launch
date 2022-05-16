@@ -12,7 +12,8 @@
   <!-- <node name="start_coppeliasim" pkg="coppeliasim_run" type="start_coppeliasim" args=" -s $(find fetch_coppeliasim)/scene/empty.ttt" output="screen"/> -->
   <!-- <node name="start_coppeliasim" pkg="coppeliasim_run" type="start_coppeliasim" args=" -s $(find fetch_coppeliasim)/scene/newroom.ttt" output="screen"/> -->
   <!-- <node name="start_coppeliasim" pkg="coppeliasim_run" type="start_coppeliasim" args=" -s $(find fetch_coppeliasim)/scene/hammer.ttt" output="screen"/> -->
-  <node name="start_coppeliasim" pkg="coppeliasim_run" type="start_coppeliasim" args=" -s $(find fetch_coppeliasim)/scene/cube.ttt" output="screen"/>
+  <!-- <node name="start_coppeliasim" pkg="coppeliasim_run" type="start_coppeliasim" args=" -s $(find fetch_coppeliasim)/scene/cube.ttt" output="screen"/> -->
+  <node name="start_coppeliasim" pkg="coppeliasim_run" type="start_coppeliasim" args=" -s $(find fetch_coppeliasim)/scene/book.ttt" output="screen"/>
   <!-- <node name="start_coppeliasim" pkg="coppeliasim_run" type="start_coppeliasim" args=" -s $(find fetch_coppeliasim)/scene/can_on_side.ttt" output="screen"/> -->
 
   <!-- send robot urdf to param server -->
