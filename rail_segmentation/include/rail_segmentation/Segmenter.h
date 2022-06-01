@@ -101,7 +101,7 @@ public:
     /*! The region color tolerance, only for small region merging in RGB segmentation */
     static constexpr double REGION_COLOR_THRESHOLD = 10;
     /*! Leaf size of the voxel grid for downsampling. */
-    static constexpr float DOWNSAMPLE_LEAF_SIZE = 0.01;
+    static constexpr float DOWNSAMPLE_LEAF_SIZE = 0.003;
     /*! Size of the marker visualization scale factor. */
     static constexpr double MARKER_SCALE = 0.01;
 #else
