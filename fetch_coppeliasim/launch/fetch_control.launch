@@ -60,6 +60,7 @@
 
     </node>
 
+
     <include file="$(find rail_segmentation)/launch/searchtable.launch"/>
 
     <!-- diff drive remapper -->

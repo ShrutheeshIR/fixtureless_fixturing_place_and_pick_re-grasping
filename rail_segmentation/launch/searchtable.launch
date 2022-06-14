@@ -1,11 +1,16 @@
 <launch>
+	<!-- <arg name="point_cloud_topic" default="/head_camera/depth22/points" /> -->
 	<arg name="point_cloud_topic" default="/head_camera/depth_downsample/points" />
 	<arg name="zones_config" default="$(find rail_segmentation)/config/zones.yaml" />
 
 	<param name="zones_config" type="string" value="$(arg zones_config)"/>
-
+	<!-- <param name="cluster_tolerance" type="double" value="0.001"/> -->
 	<!-- <node name="table_searcher" pkg="rail_segmentation" type="rail_segmentation" output="screen"/> -->
 	<node name="table_searcher" pkg="rail_segmentation" type="rail_segmentation" output="screen">
 		<param name="point_cloud_topic" type="string" value="$(arg point_cloud_topic)"/>
+		<param name="cluster_tolerance" type="double" value="0.02" />
+		<param name="min_cluster_size" type="double" value="100" />
+
+		<param name="label_markers" type="bool" value="true" />
 	</node>
 </launch>

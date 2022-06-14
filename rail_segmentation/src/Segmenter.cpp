@@ -49,6 +49,7 @@ Segmenter::Segmenter() : private_node_("~"), tf2_(tf_buffer_)
   private_node_.getParam("zones_config", zones_file);
 
   // setup publishers/subscribers we need
+  ROS_INFO("USING CLUSTER TOLERANCE [%f]", cluster_tolerance_);
   segment_srv_ = private_node_.advertiseService("segment", &Segmenter::segmentCallback, this);
   segment_objects_srv_ = private_node_.advertiseService("segment_objects", &Segmenter::segmentObjectsCallback, this);
   segment_objects_from_point_cloud_srv_ = private_node_.advertiseService("segment_objects_from_point_cloud", &Segmenter::segmentObjectsFromPointCloudCallback, this);
